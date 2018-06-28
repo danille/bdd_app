@@ -8,7 +8,7 @@ Feature: Authentication
         Given I visit the homepage
         When I fill the sign up form
         And I confirm the email
-        Then should see that my acoount is confirmed
+        Then should see that my account is confirmed
 
 
     Scenario: User Logs In

@@ -5,7 +5,7 @@ end
 When("I fill the sign up form") do
   click_link "Sign up"
 
-  fill_in "user_mail", :with => "tester@testdomain.test"
+  fill_in "user_email", :with => "tester@testdomain.test"
   fill_in "user_password", :with => "pa$$word"
   fill_in "user_password_confirmation", :with => "pa$$word"
 
@@ -13,13 +13,13 @@ When("I fill the sign up form") do
 end
 
 When("I confirm the email") do
-  open_mail "tester@testdomain.test"
+  open_email "tester@testdomain.test"
 
-  visit_in_mail "Confirm my account"
+  visit_in_email "Confirm my account"
 end
 
-Then("should see that my acoount is confirmed") do
-  message = "Your email account has been successfully confirmed"
+Then("should see that my account is confirmed") do
+  message = "Your email address has been successfully confirmed"
 
   expect(page).to have_content message
 end
@@ -36,7 +36,7 @@ When("I fill in the login form") do
 end
 
 Then("I should be logged in") do
-  expect(page).to have_content("Logged in")
+  expect(page).to have_content("Signed in")
 end
 
 Given("I am logged in") do

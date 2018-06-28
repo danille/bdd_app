@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# Use Devise for authentication
+gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -45,6 +47,7 @@ group :development, :test do
     git: 'https://github.com/thoughtbot/shoulda-matchers.git', 
     branch: 'rails-5'
   gem 'factory_bot_rails'
+  gem 'email_spec'
 end
 
 group :development do
